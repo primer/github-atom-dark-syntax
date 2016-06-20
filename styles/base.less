@@ -11,7 +11,7 @@ atom-text-editor .gutter, :host .gutter {
 }
 
 atom-text-editor .gutter .line-number.cursor-line, :host .gutter .line-number.cursor-line {
-  background-color: @syntax-gutter-background-color-selected;
+  background-color: @syntax-gutter-background-color;
   color: @syntax-gutter-text-color-selected;
 }
 
@@ -41,15 +41,19 @@ atom-text-editor .search-results .marker.current-result .region, :host .search-r
 }
 
 atom-text-editor.is-focused .cursor, :host(.is-focused) .cursor {
-  border-color: @syntax-cursor-color;
+  border-color: #fff;
 }
 
 atom-text-editor.is-focused .selection .region, :host(.is-focused) .selection .region {
   background-color: @syntax-selection-color;
 }
 
-atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-editor.is-focused .line.cursor-line, :host(.is-focused) .line-number.cursor-line-no-selection, :host(.is-focused) .line.cursor-line {
-  background-color: #f5f5f5;
+:host(.is-focused) .line.cursor-line {
+  background-color: lighten(@syntax-cursor-color, 25%);
+}
+
+atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-editor.is-focused .line.cursor-line, :host(.is-focused) .line-number.cursor-line-no-selection {
+  color: #f5f5f5;
 }
 
 .comment {
