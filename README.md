@@ -29,7 +29,7 @@ For any bugs, fill reports with the [generator](https://github.com/primer/github
 - Update the lib files
 - Update the version to match the github-syntax-theme-generator version
 - Push to GitHub
-- Publish to npm
+- Publish to apm
 
 ## Changelog
 
