@@ -52,11 +52,11 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   background-color: #464a4d;
 }
 
-.comment {
+.comment, .punctuation.definition.comment, .string.comment {
   color: #969896;
 }
 
-.constant, .variable.other.constant {
+.constant, .entity.name.constant, .variable.other.constant, .variable.language {
   color: #0099cd;
 }
 
@@ -110,6 +110,13 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: #ddd;
 }
 
+.invalid.broken {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #e63525;
+}
+
 .invalid.deprecated {
   font-weight: bold;
   font-style: italic;
@@ -124,6 +131,17 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   background-color: #e63525;
 }
 
+.invalid.unimplemented {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  color: #e63525;
+}
+
+.message.error {
+  color: #e63525;
+}
+
 .string .source {
   color: #ddd;
 }
@@ -132,7 +150,7 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: #0099cd;
 }
 
-.string.regexp {
+.source.regexp, .string.regexp {
   color: #3c66e2;
 }
 
@@ -184,14 +202,24 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
   color: #0099cd;
 }
 
-.markup.deleted, .meta.diff.header.from-file {
+.markup.deleted, .meta.diff.header.from-file, .punctuation.definition.deleted {
   color: #bd2c00;
   background-color: #ffecec;
 }
 
-.markup.inserted, .meta.diff.header.to-file {
+.markup.inserted, .meta.diff.header.to-file, .punctuation.definition.inserted {
   color: #55a532;
   background-color: #eaffea;
+}
+
+.markup.changed, .punctuation.definition.changed {
+  color: #ef9700;
+  background-color: #ffe3b4;
+}
+
+.markup.ignored, .markup.untracked {
+  color: #d8d8d8;
+  background-color: #808080;
 }
 
 .meta.diff.range {
@@ -210,4 +238,29 @@ atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-edi
 
 .meta.output {
   color: #264ec5;
+}
+
+.brackethighlighter.tag, .brackethighlighter.curly, .brackethighlighter.round, .brackethighlighter.square, .brackethighlighter.angle, .brackethighlighter.quote {
+  color: #e1e1e1;
+}
+
+.brackethighlighter.unmatched {
+  color: #e63525;
+}
+
+.sublimelinter.mark.error {
+  color: #e63525;
+}
+
+.sublimelinter.mark.warning {
+  color: #fb8764;
+}
+
+.sublimelinter.gutter-mark {
+  color: #6e7880;
+}
+
+.constant.other.reference.link, .string.other.link {
+  text-decoration: underline;
+  color: #3c66e2;
 }
